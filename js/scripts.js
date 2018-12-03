@@ -1,4 +1,4 @@
-var options = ["Daniel","Dylan", "Ganna", "Gerard", "Gilbert", "Jacqueline", "Joe", "Judith", "Kelly", "Shengnan"];
+var options = ["Daniel", "Dylan", "Devan", "Ganna", "Gerard", "Gilbert", "Jacqueline", "Joe", "Judith", "Kelly", "Shengnan"];
 
 var startAngle = 0;
 var arc = Math.PI / (options.length / 2);
@@ -54,8 +54,7 @@ function drawRouletteWheel() {
       //ctx.fillStyle = colors[i];
       ctx.fillStyle = getColor(i, options.length);
       //ctx.fillStyle = 'hsl(' + 360 * Math.random() + ', 50%, 50%)';
-
-
+      
       ctx.beginPath();
       ctx.arc(250, 250, outsideRadius, angle, angle + arc, false);
       ctx.arc(250, 250, insideRadius, angle + arc, angle, true);

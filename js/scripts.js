@@ -1,4 +1,4 @@
-var options = ["Daniel", "Dylan", "Devan", "Gerard", "Gilbert", "Jacqueline", "Joe", "Judith", "Kelly", "Shengnan"];
+var options = ["Ashlee","Daniel", "Devan", "Dylan", "Gerard", "Gilbert", "Jacqueline", "Joe", "Judith", "Kavya", "Kelly", "Kuljit", "Shengnan"]
 
 var startAngle = 0;
 var arc = Math.PI / (options.length / 2);
@@ -37,17 +37,17 @@ function getColor(item, maxitem) {
 function drawRouletteWheel() {
   var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var outsideRadius = 200;
-    var textRadius = 160;
-    var insideRadius = 125;
+    var outsideRadius = 300;
+    var textRadius = 240;
+    var insideRadius = 187.5;
 
     ctx = canvas.getContext("2d");
-    ctx.clearRect(0,0,500,500);
+    ctx.clearRect(0,0,750,750);
 
     ctx.strokeStyle = "black";
     ctx.lineWidth = 2;
 
-    ctx.font = 'bold 22px Helvetica, Arial';
+    ctx.font = 'bold 22px Arial';
 
     for(var i = 0; i < options.length; i++) {
       var angle = startAngle + i * arc;
@@ -56,8 +56,8 @@ function drawRouletteWheel() {
       //ctx.fillStyle = 'hsl(' + 360 * Math.random() + ', 50%, 50%)';
       
       ctx.beginPath();
-      ctx.arc(250, 250, outsideRadius, angle, angle + arc, false);
-      ctx.arc(250, 250, insideRadius, angle + arc, angle, true);
+      ctx.arc(375, 375, outsideRadius, angle, angle + arc, false);
+      ctx.arc(375, 375, insideRadius, angle + arc, angle, true);
       ctx.stroke();
       ctx.fill();
 
@@ -67,8 +67,8 @@ function drawRouletteWheel() {
       ctx.shadowBlur    = 0;
       ctx.shadowColor   = "rgb(220,220,220)";
       ctx.fillStyle = "black";
-      ctx.translate(250 + Math.cos(angle + arc / 2) * textRadius, 
-                    250 + Math.sin(angle + arc / 2) * textRadius);
+      ctx.translate(375 + Math.cos(angle + arc / 2) * textRadius, 
+                    375 + Math.sin(angle + arc / 2) * textRadius);
       ctx.rotate(angle + arc / 2 + Math.PI / 2);
       var text = options[i];
       ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
@@ -78,14 +78,14 @@ function drawRouletteWheel() {
     //Arrow
     ctx.fillStyle = "black";
     ctx.beginPath();
-    ctx.moveTo(250 - 4, 250 - (outsideRadius + 5));
-    ctx.lineTo(250 + 4, 250 - (outsideRadius + 5));
-    ctx.lineTo(250 + 4, 250 - (outsideRadius - 5));
-    ctx.lineTo(250 + 9, 250 - (outsideRadius - 5));
-    ctx.lineTo(250 + 0, 250 - (outsideRadius - 13));
-    ctx.lineTo(250 - 9, 250 - (outsideRadius - 5));
-    ctx.lineTo(250 - 4, 250 - (outsideRadius - 5));
-    ctx.lineTo(250 - 4, 250 - (outsideRadius + 5));
+    ctx.moveTo(375 - 6, 375 - (outsideRadius + 7.5));
+    ctx.lineTo(375 + 6, 375 - (outsideRadius + 7.5));
+    ctx.lineTo(375 + 6, 375 - (outsideRadius - 7.5));
+    ctx.lineTo(375 + 12, 375 - (outsideRadius - 7.5));
+    ctx.lineTo(375 + 0, 375 - (outsideRadius - 19.5));
+    ctx.lineTo(375 - 12, 375 - (outsideRadius - 7.5));
+    ctx.lineTo(375 - 6, 375 - (outsideRadius - 7.5));
+    ctx.lineTo(375 - 6, 375 - (outsideRadius + 7.5));
     ctx.fill();
   }
 }

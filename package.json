@@ -1,8 +1,8 @@
 {
-    "title": "Simple Sidebar",
-    "name": "startbootstrap-simple-sidebar",
+    "title": "Team 1 Scrum Roulette",
+    "name": "team1scrum-simple-roulette",
     "version": "4.1.1",
-    "description": "A simple sidbar navigation HTMl template built with Bootstrap",
+    "description": "A simple roulette wheel built with Bootstrap",
     "keywords": [
         "css",
         "sass",
@@ -11,22 +11,22 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/simple-sidebar",
+    "homepage": "https://gerardng.github.io/team1scrum/",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "",
+        "email": ""
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Gerard Ng",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Gerard Ng"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-simple-sidebar.git"
+        "url": "https://github.com/gerardng/team1scrum.git"
     },
     "dependencies": {
-        "bootstrap": "4.1.1",
+        "bootstrap": "4.3.1",
         "jquery": "3.3.1"
     },
     "devDependencies": {

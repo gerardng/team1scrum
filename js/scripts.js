@@ -1,4 +1,4 @@
-var options = ["Daniel", "Dylan", "Gerard", "Gilbert", "Jacqueline", "Joe", "Judith", "Kamaljeet", "Kavya", "Kelly", "Kuljit", "Shengnan", "Vukasin"];
+var options = ["Daniel", "Dylan", "Gilbert", "Jacqueline", "Joe", "Judith", "Kelly", "Kuljit", "Shengnan", "Vukasin"];
 
 var startAngle = 0;
 var arc = Math.PI / (options.length / 2);
